@@ -1,9 +1,17 @@
 // Obtenemos los elementos de la colección
 var noticias = Alloy.Collections.noticia;
-noticias.fetch(); // -> read
+
+// Control del widget "pull to refresh": https://github.com/FokkeZB/nl.fokkezb.pullToRefresh
+function refrescarRss(e) {
+    noticias.fetch({
+        success: e.hide,
+        error: e.hide
+    });
+}
+$.ptr.refresh();
 
 // Mostrar el detalle de una noticia
-function mostrarDetalle(noticia) {
+function mostrarDetalle(noticia) { 
 	
 	// Instanciamos el controlador que gestiona el detalle de cada noticia
 	// le pasamos como parámetro el modelo (la noticia) de la colección

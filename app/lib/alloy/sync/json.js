@@ -17,6 +17,8 @@ function Sync(metodo, modelo, opciones) {
 		var xhr = Ti.Network.createHTTPClient({
 
 			onload : function() {
+				
+				
 
 				try {
 					var noticias = JSON.parse(this.responseText); // Pareamos en JSON el response
@@ -24,7 +26,6 @@ function Sync(metodo, modelo, opciones) {
 					modelo.length = noticias.length;
 
 					opciones.success((modelo.length === 1) ? noticias[0] : noticias, this.responseText);
-					
 
 				} catch (e) {
 					opciones.error(modelo, this.responseText);

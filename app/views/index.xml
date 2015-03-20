@@ -1,35 +1,39 @@
 <Alloy>
-	
+
 	<!-- Asociamos elementos de esta vista con la colección de modelos -->
 	<Collection src="noticia" />
-	
+
 	<!-- NavigationWindow cross-plaftorm gracias a: https://github.com/FokkeZB/UTiL/tree/master/xp.ui -->
 	<NavigationWindow module="xp.ui">
 		<Window class="contenedor" title="Lector RSS">
 			
-			<!-- Aquí viene la listView -->
-			<ListView id="listView" defaultItemTemplate="plantillaBasica" onItemclick="mostrarDetalle">
-				
-				<!-- Nos permitirá buscar en la listView -->
-				<SearchBar />
-				
-				<!-- Definimos la plantilla de que usará cada item listItem -->
-				<Templates>
-					<ItemTemplate name="plantillaBasica">
-						<Label bindId="title" id="titulo"></Label>
-						<Label bindId="excerpt" id="extracto"></Label>
-					</ItemTemplate>
-				</Templates>
-				
-				<!-- Cada uno de los items en la listView, asociado a la colleción y a un callback en "dataTransform"
-				que convertira cada instancia de la colección en JSON para ser representado 
-				http://docs.appcelerator.com/titanium/latest/#!/guide/ListViews-section-37521650_ListViews
-				-->
-				<ListSection dataCollection="noticia" dataTransform="transformarNoticias">
-					<ListItem itemId="{id}" title:text="{title}" excerpt:text="{excerpt}" searchableText="{content}" />
-				</ListSection>
-				
-			</ListView>
+			<Widget id="ptr" src="nl.fokkezb.pullToRefresh" onRelease="refrescarRss">
+
+				<!-- Aquí viene la listView -->
+				<ListView id="listView" defaultItemTemplate="plantillaBasica" onItemclick="mostrarDetalle">
+
+					<!-- Nos permitirá buscar en la listView -->
+					<SearchBar />
+
+					<!-- Definimos la plantilla de que usará cada item listItem -->
+					<Templates>
+						<ItemTemplate name="plantillaBasica">
+							<Label bindId="title" id="titulo"></Label>
+							<Label bindId="excerpt" id="extracto"></Label>
+						</ItemTemplate>
+					</Templates>
+
+					<!-- Cada uno de los items en la listView, asociado a la colleción y a un callback en "dataTransform"
+					que convertira cada instancia de la colección en JSON para ser representado
+					http://docs.appcelerator.com/titanium/latest/#!/guide/ListViews-section-37521650_ListViews
+					-->
+					<ListSection dataCollection="noticia" dataTransform="transformarNoticias">
+						<ListItem itemId="{id}" title:text="{title}" excerpt:text="{excerpt}" searchableText="{content}" />
+					</ListSection>
+
+				</ListView>
+
+			</Widget>
 			
 		</Window>
 	</NavigationWindow>
