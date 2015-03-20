@@ -5,7 +5,7 @@
     <version>1.0</version>
     <publisher>juan</publisher>
     <url>http://wmedia.es</url>
-    <description/>
+    <description>undefined</description>
     <copyright>2015 by juan</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
@@ -48,8 +48,8 @@
         <theme>default</theme>
     </mobileweb>
     <modules>
-    <module platform="android" version="0.4.1">com.rkam.swiperefreshlayout</module>
-  </modules>
+        <module platform="android" version="0.4.1">com.rkam.swiperefreshlayout</module>
+    </modules>
     <deployment-targets>
         <target device="android">true</target>
         <target device="blackberry">false</target>
