@@ -1,15 +1,26 @@
-".container": {
+".contenedor": {
 	backgroundColor:"white"
 }
 
-"Label": {
-	width: Ti.UI.SIZE,
-	height: Ti.UI.SIZE,
-	color: "#000"
+"#titulo" : {
+  color: 'black',
+  font: {
+    fontFamily: 'Helvetica',
+    fontSize: 18,
+    fontWeight: 'bold'
+  },
+  left: 15,
+  top: 5,
+  height: 20,
 }
 
-"#label": {
-	font: {
-		fontSize: 12
-	}
+"#extracto" : {
+  color: 'gray',
+  font: {
+    fontFamily: 'Arial',
+    fontSize: 12
+  },
+  left: 15, 
+  top: 25,
+  height: 14
 }

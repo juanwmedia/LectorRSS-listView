@@ -9,3 +9,6 @@
 // object. For example:
 //
 // Alloy.Globals.someGlobalFunction = function(){};
+
+// URL para acceder al JSON de las noticias
+Alloy.Globals.urlFeedRss = 'http://wmedia.es/?feed=json';
