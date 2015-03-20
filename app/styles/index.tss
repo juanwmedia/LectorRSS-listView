@@ -1,7 +1,3 @@
-".contenedor": {
-	backgroundColor:"white"
-}
-
 "#titulo" : {
   color: 'black',
   font: {

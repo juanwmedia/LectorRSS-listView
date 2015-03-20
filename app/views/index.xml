@@ -3,6 +3,7 @@
 	<!-- Asociamos elementos de esta vista con la colección de modelos -->
 	<Collection src="noticia" />
 	
+	<!-- NavigationWindow cross-plaftorm gracias a: https://github.com/FokkeZB/UTiL/tree/master/xp.ui -->
 	<NavigationWindow module="xp.ui">
 		<Window class="contenedor" title="Lector RSS">
 			

@@ -1,0 +1,6 @@
+<Alloy>
+	<!-- El título será actualizado desde el controlador -->
+	<Window class="contenedor" title="Detalle de noticia">
+		<WebView id="vistaWeb" />
+	</Window>
+</Alloy>

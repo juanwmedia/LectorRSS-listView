@@ -1,0 +1,4 @@
+// app.tss es una hoja de estilos GLOBAL para todas las vistas de la App :)
+".contenedor": {
+	backgroundColor:"white"
+}
