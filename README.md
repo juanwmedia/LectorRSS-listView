@@ -8,4 +8,3 @@ Está basada en el [tutorial de Alloy por Fokke Zandbergen](https://github.com/F
 He tratado de **comentar las partes más importantes del código**, sobre todo el uso del componente UI listView y los modelos/colecciones.
 
 También, he añadido el widget [Pull to Refresh](http://gitt.io/component/nl.fokkezb.pullToRefresh) y el arte gráfico esencial vía [TiCons](http://ticons.fokkezb.nl/).
-
