@@ -1,22 +1,29 @@
-"#titulo" : {
-  color: 'black',
-  font: {
-    fontFamily: 'Helvetica',
-    fontSize: 18,
-    fontWeight: 'bold'
-  },
-  left: 15,
-  top: 5,
-  height: 20,
+"#imagen": {
+	left: 5,
+	top: 5,
+	width: 30,
+	height: 30
 }
 
-"#extracto" : {
-  color: 'gray',
-  font: {
-    fontFamily: 'Arial',
-    fontSize: 12
-  },
-  left: 15, 
-  top: 25,
-  height: 14
+"#titulo": {
+	color: 'black',
+	font: {
+		fontFamily: 'Helvetica',
+		fontSize: 16,
+		fontWeight: 'bold'
+	},
+	left: 45,
+	top: 5,
+	height: 20
+}
+
+"#extracto": {
+	color: 'gray',
+	font: {
+		fontFamily: 'Arial',
+		fontSize: 12
+	},
+	left: 45,
+	top: 25,
+	height: 14
 }

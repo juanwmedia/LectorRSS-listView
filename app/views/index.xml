@@ -7,6 +7,7 @@
 	<NavigationWindow module="xp.ui">
 		<Window class="contenedor" title="Lector RSS">
 			
+			<!-- http://gitt.io/component/nl.fokkezb.pullToRefresh -->
 			<Widget id="ptr" src="nl.fokkezb.pullToRefresh" onRelease="refrescarRss">
 
 				<!-- Aquí viene la listView -->
@@ -18,8 +19,9 @@
 					<!-- Definimos la plantilla de que usará cada item listItem -->
 					<Templates>
 						<ItemTemplate name="plantillaBasica">
-							<Label bindId="title" id="titulo"></Label>
-							<Label bindId="excerpt" id="extracto"></Label>
+							<ImageView bindId="imagen" id="imagen"></ImageView>
+							<Label bindId="titulo" id="titulo"></Label>
+							<Label bindId="extracto" id="extracto"></Label>
 						</ItemTemplate>
 					</Templates>
 
@@ -28,7 +30,7 @@
 					http://docs.appcelerator.com/titanium/latest/#!/guide/ListViews-section-37521650_ListViews
 					-->
 					<ListSection dataCollection="noticia" dataTransform="transformarNoticias">
-						<ListItem itemId="{id}" title:text="{title}" excerpt:text="{excerpt}" searchableText="{content}" />
+						<ListItem itemId="{id}" imagen:image="{thumbnail}" titulo:text="{title}" extracto:text="{excerpt}" searchableText="{content}" />
 					</ListSection>
 
 				</ListView>
